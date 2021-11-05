@@ -1,4 +1,5 @@
 import React from 'react';
+import './ListOfCoutries.css';
 import Country from '../country/Country';
 import Modal from '../modal/Modal';
 
@@ -16,6 +17,11 @@ function ListOfCoutries(): JSX.Element {
           <span>Total Confirmed</span>
         </div>
       </div>
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
       <Country />
       <Modal />
     </div>

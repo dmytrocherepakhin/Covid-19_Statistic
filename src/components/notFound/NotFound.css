@@ -1,0 +1,13 @@
+.notFound{
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+.notFound h1 {
+  font-size: 72px;
+  margin: 50px 0 20px;
+}
+
+.notFound h2 {
+  font-size: 48px;
+}

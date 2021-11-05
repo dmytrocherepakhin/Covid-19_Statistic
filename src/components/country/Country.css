@@ -1,0 +1,9 @@
+.country{
+  background-color: white;
+  color: black;
+}
+
+.country__name{
+    border-left: 1px solid #B2B2B2;
+  border-right: 1px solid #B2B2B2;
+}

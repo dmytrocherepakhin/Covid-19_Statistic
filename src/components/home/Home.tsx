@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from '../header/Header';
-import Items from '../listOfCoutries/ListOfCountries';
-import './Home.css';
+import ListOfCoutries from '../listOfCoutries/ListOfCountries';
 
 function Home(): JSX.Element {
   return (
     <div className="home">
       <Header />
-      <Items />
+      <ListOfCoutries />
     </div>
   );
 }

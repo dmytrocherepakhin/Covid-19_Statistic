@@ -1,8 +1,9 @@
 import React from 'react';
+import './Country.css';
 
 function Country(): JSX.Element {
   return (
-    <div className="country">
+    <div className="country list__columnHeadings">
       <div className="country__number list__columnHeadings_number">
         <span>1</span>
       </div>
