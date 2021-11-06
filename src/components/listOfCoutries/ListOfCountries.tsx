@@ -1,9 +1,11 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import './ListOfCoutries.css';
 import Country from '../country/Country';
 import Modal from '../modal/Modal';
+import { ICountry } from '../home/Home';
 
-function ListOfCoutries(): JSX.Element {
+function ListOfCoutries(props: any): JSX.Element {
   return (
     <div className="list">
       <div className="list__columnHeadings">
@@ -17,13 +19,17 @@ function ListOfCoutries(): JSX.Element {
           <span>Total Confirmed</span>
         </div>
       </div>
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Modal />
+      {props.countries
+        ? props.countries.map((item: ICountry, index: number) => (
+          <Country
+            key={item.ID}
+            country={item.Country}
+            totalConfirmed={item.TotalConfirmed}
+            num={index + 1}
+          />
+        ))
+        : null}
+      {/* <Modal /> */}
     </div>
   );
 }

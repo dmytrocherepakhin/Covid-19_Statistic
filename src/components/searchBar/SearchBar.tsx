@@ -1,11 +1,13 @@
 import React from 'react';
 import './SearchBar.css';
 
-function SearchBar(): JSX.Element {
+function SearchBar(props: any): JSX.Element {
   return (
     <div className="searchBar">
       <form className="searchBar__form" action="#">
         <input
+          onChange={props.handleInput}
+          value={props.value}
           placeholder="Search..."
           className="searchBar__form_input"
           type="text"

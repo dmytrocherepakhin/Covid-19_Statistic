@@ -3,7 +3,7 @@ import SearchBar from '../searchBar/SearchBar';
 import './Header.css';
 import logo from '../../images/logo.png';
 
-function Header(): JSX.Element {
+function Header(props: any): JSX.Element {
   return (
     <div className="header">
       <div className="header__wrapper">
@@ -14,7 +14,7 @@ function Header(): JSX.Element {
           <h1 className="header__heading">Statistic</h1>
         </div>
       </div>
-      <SearchBar />
+      <SearchBar handleInput={props.handleInput} value={props.value} />
     </div>
   );
 }
