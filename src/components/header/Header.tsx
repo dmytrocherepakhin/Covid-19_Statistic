@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../searchBar/SearchBar';
 import './Header.css';
-import logo from '../../images/logo.png';
+import logo from '../../assets/images/logo.png';
 
 function Header(props: any): JSX.Element {
   return (

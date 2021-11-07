@@ -1,14 +1,22 @@
 import React from 'react';
 import './Modal.css';
-import confirmed from '../../images/confirmed.svg';
-import deaths from '../../images/deaths.svg';
-import recovered from '../../images/recovered.svg';
+import confirmed from '../../assets/images/confirmed.svg';
+import deaths from '../../assets/images/deaths.svg';
+import recovered from '../../assets/images/recovered.svg';
 
-function Modal(): JSX.Element {
+type IProps = {
+  country: string | undefined;
+  totalConfirmed: number | undefined;
+  totalDeaths: number | undefined;
+  totalRecovered: number | undefined;
+  handleModalBtn: any;
+};
+
+function Modal(props: IProps): JSX.Element {
   return (
     <div className="modal">
       <div className="modal__item">
-        <h2 className="modal__item_title">Albania</h2>
+        <h2 className="modal__item_title">{props.country}</h2>
         <div className="modal__item_confirmed info-row">
           <div className="info-row__subtitle">
             <div className="info-row__subtitle_wrapper">
@@ -20,7 +28,7 @@ function Modal(): JSX.Element {
             </div>
             <span className="info-row__subtitle_text">Total Confirmed</span>
           </div>
-          <div className="info-row__number">132215</div>
+          <div className="info-row__number">{props.totalConfirmed}</div>
         </div>
         <div className="modal__item_deaths info-row">
           <div className="info-row__subtitle">
@@ -31,7 +39,7 @@ function Modal(): JSX.Element {
                 alt="deaths"
               />
             </div>
-            <span className="info-row__subtitle_text">Total Deaths</span>
+            <span className="info-row__subtitle_text">{props.totalDeaths}</span>
           </div>
           <div className="info-row__number">2812</div>
         </div>
@@ -46,9 +54,9 @@ function Modal(): JSX.Element {
             </div>
             <span className="info-row__subtitle_text">Total Recovered</span>
           </div>
-          <div className="info-row__number">13230</div>
+          <div className="info-row__number">{props.totalRecovered}</div>
         </div>
-        <div className="modal__item_btn">
+        <div className="modal__item_btn" onClick={props.handleModalBtn}>
           <span>ok</span>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFound.css';
-import logo from '../../images/logo.png';
+import logo from '../../assets/images/logo.png';
 
 function NotFound(): JSX.Element {
   return (

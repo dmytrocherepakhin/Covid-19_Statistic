@@ -2,7 +2,6 @@
 import React from 'react';
 import './ListOfCoutries.css';
 import Country from '../country/Country';
-import Modal from '../modal/Modal';
 import { ICountry } from '../home/Home';
 
 function ListOfCoutries(props: any): JSX.Element {
@@ -12,24 +11,31 @@ function ListOfCoutries(props: any): JSX.Element {
         <div className="list__columnHeadings_number">
           <span>{'\u2116'}</span>
         </div>
-        <div className="list__columnHeadings_name">
+        <div
+          className="list__columnHeadings_name"
+          onClick={props.sortByCountry}
+        >
           <span>Country</span>
         </div>
-        <div className="list__columnHeadings_total">
+        <div
+          className="list__columnHeadings_total"
+          onClick={props.sortByTotalConfirmed}
+        >
           <span>Total Confirmed</span>
         </div>
       </div>
       {props.countries
         ? props.countries.map((item: ICountry, index: number) => (
           <Country
+            handleCountry={props.handleCountry}
             key={item.ID}
             country={item.Country}
             totalConfirmed={item.TotalConfirmed}
             num={index + 1}
+            id={item.ID}
           />
         ))
         : null}
-      {/* <Modal /> */}
     </div>
   );
 }

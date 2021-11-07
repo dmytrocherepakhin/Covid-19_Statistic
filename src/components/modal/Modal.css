@@ -1,11 +1,10 @@
 .modal{
   position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: rgba(0, 0, 0, 0.5);
-cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal__item{
@@ -15,7 +14,6 @@ cursor: pointer;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 400px;
   width: 600px;
   border-radius: 20px;
   background-color: white;
@@ -24,7 +22,6 @@ cursor: pointer;
   font-weight: normal;
   font-size: 24px;
   color: #666666;
-  cursor: default;
 }
 
 .modal__item_title{
@@ -42,7 +39,7 @@ cursor: pointer;
 }
 
 .modal__item_btn{
-  margin: 25px auto;
+  margin: 25px auto 0;
   font-weight: 700;
   text-transform: uppercase;
   color: white;
@@ -55,8 +52,8 @@ cursor: pointer;
 }
 
 .modal__item_btn:hover{
-background-color: #666666;
-transition: all .2s;
+  background-color: #416f94;
+  transition: all .2s;
 }
 
 .modal__item_btn span{

@@ -1,12 +1,13 @@
 import React from 'react';
-import { ICountry } from '../home/Home';
 import './Country.css';
-
-// type IProps = ICountry & number;
 
 function Country(props: any): JSX.Element {
   return (
-    <div className="country list__columnHeadings">
+    <div
+      id={props.id}
+      className="country list__columnHeadings"
+      onClick={props.handleCountry}
+    >
       <div className="country__number list__columnHeadings_number">
         <span>{props.num}</span>
       </div>

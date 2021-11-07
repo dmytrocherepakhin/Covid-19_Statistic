@@ -1,16 +1,25 @@
+.searchBar{
+  max-width: 600px;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
 .searchBar__form{
   box-sizing: border-box;
   display: flex;
   padding: 0 0 0 32px;
   height: 80px;
-  width: 600px;
+  /* width: 600px; */
   border-radius: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  justify-content:space-between
+  justify-content:space-between;
+  align-items: center;
+  
 }
 
 .searchBar__form_input{
-  width: 400px;
+  width: 100%;
+  min-width: 200px;
   outline: none;
   border: 1px solid transparent;
   font-family: "Roboto";
@@ -22,26 +31,9 @@
   color: #B2B2B2;
 }
 
-.searchBar__form_btn{
-  padding-top: 10px;
-  height: 80px;
-  width: 80px;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 20px;
-}
-
-.searchBar__form_btn:hover{
-  cursor: pointer;
-}
-
-.searchBar__form_btn svg{
-  transition: all .3s;
-}
-
-.searchBar__form_btn:hover svg{
-  transition: all .3s;
-  fill: #2196F3;
-  height: 40px;
-  width: 40px;
+.searchBar__form_zoom{
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin-right: 22px;
 }
