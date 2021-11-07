@@ -1,9 +1,9 @@
-import { ICountry } from '../components/home/Home';
+import { ICountry } from '../assets/types';
 
 const baseUrl = 'https://api.covid19api.com/summary';
 export async function getCountries(): Promise<ICountry[] | undefined> {
-  const response: Response = await fetch(baseUrl);
-  if (response.ok) {
+  try {
+    const response: Response = await fetch(baseUrl);
     const countries = await response.json();
     countries.Countries.forEach((el: ICountry) =>
       el.Country.includes(',')
@@ -11,7 +11,7 @@ export async function getCountries(): Promise<ICountry[] | undefined> {
         : null
     );
     return countries.Countries;
-  } else {
-    console.error('Error of request: ' + response.status);
+  } catch (err) {
+    console.log(err);
   }
 }

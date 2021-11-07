@@ -2,9 +2,16 @@
 import React from 'react';
 import './ListOfCoutries.css';
 import Country from '../country/Country';
-import { ICountry } from '../home/Home';
+import { ICountry } from '../../assets/types';
 
-function ListOfCoutries(props: any): JSX.Element {
+type IProps = {
+  countries: ICountry[] | undefined;
+  sortByCountry: React.MouseEventHandler;
+  sortByTotalConfirmed: React.MouseEventHandler;
+  handleCountry: React.MouseEventHandler;
+};
+
+function ListOfCoutries(props: IProps): JSX.Element {
   return (
     <div className="list">
       <div className="list__columnHeadings">

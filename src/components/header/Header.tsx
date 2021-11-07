@@ -3,7 +3,12 @@ import SearchBar from '../searchBar/SearchBar';
 import './Header.css';
 import logo from '../../assets/images/logo.png';
 
-function Header(props: any): JSX.Element {
+type IProps = {
+  handleInput: React.FormEventHandler;
+  value: string | string[];
+};
+
+function Header(props: IProps): JSX.Element {
   return (
     <div className="header">
       <div className="header__wrapper">

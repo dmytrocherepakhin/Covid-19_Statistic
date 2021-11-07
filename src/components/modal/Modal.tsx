@@ -9,7 +9,7 @@ type IProps = {
   totalConfirmed: number | undefined;
   totalDeaths: number | undefined;
   totalRecovered: number | undefined;
-  handleModalBtn: any;
+  handleModalBtn: React.MouseEventHandler;
 };
 
 function Modal(props: IProps): JSX.Element {

@@ -2,7 +2,12 @@ import React from 'react';
 import './SearchBar.css';
 import zoom from '../../assets/images/search.svg';
 
-function SearchBar(props: any): JSX.Element {
+type IProps = {
+  handleInput: React.FormEventHandler;
+  value: string | string[];
+};
+
+function SearchBar(props: IProps): JSX.Element {
   return (
     <div className="searchBar">
       <form className="searchBar__form" action="#">

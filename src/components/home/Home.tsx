@@ -6,17 +6,7 @@ import Header from '../header/Header';
 import ListOfCoutries from '../listOfCoutries/ListOfCountries';
 import queryString from 'query-string';
 import Modal from '../modal/Modal';
-
-export interface ICountry {
-  Country: string;
-  ID: string;
-  TotalConfirmed: number;
-  TotalDeaths: number;
-  TotalRecovered: number;
-}
-export interface ICovidData {
-  Countries: ICountry[];
-}
+import { ICountry } from '../../assets/types';
 
 function Home(): JSX.Element {
   const history = useNavigate();
@@ -42,8 +32,8 @@ function Home(): JSX.Element {
     history(target.value ? '?query=' + target.value : '');
   };
 
-  const handleCountry = (event: any): void => {
-    const target = event.currentTarget as HTMLInputElement;
+  const handleCountry = (e: React.MouseEvent): void => {
+    const target = e.currentTarget as HTMLInputElement;
     setOpenModalId(target.getAttribute('id'));
     setModalData(
       covidData

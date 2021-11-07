@@ -1,7 +1,15 @@
 import React from 'react';
 import './Country.css';
 
-function Country(props: any): JSX.Element {
+type IProps = {
+  country: string;
+  handleCountry: React.MouseEventHandler;
+  num: number;
+  totalConfirmed: number;
+  id: string;
+};
+
+function Country(props: IProps): JSX.Element {
   return (
     <div
       id={props.id}
